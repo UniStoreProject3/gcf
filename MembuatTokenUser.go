@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
-	"github.com/Befous/BackendGIS"
+	"github.com/UniStoreProject3/Backend"
 )
 
 func init() {
@@ -24,6 +24,6 @@ func HelloHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 	// Set CORS headers for the main request.
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	fmt.Fprintf(w, peda.MembuatTokenUser("privatekey", "mongoenv", "befous", "user", r))
+	fmt.Fprintf(w, peda.MembuatTokenUser("privatekey", "mongoenv", "unistore", "user", r))
 
 }
